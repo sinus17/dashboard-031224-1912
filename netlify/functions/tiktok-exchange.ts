@@ -4,6 +4,7 @@ import { handleCors } from './config/cors';
 import { createResponse, createErrorResponse } from './config/responses';
 
 const handler: Handler = async (event) => {
+  console.log("begin")
   if (event.httpMethod === 'OPTIONS') {
     return handleCors();
   }
