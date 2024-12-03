@@ -12,6 +12,8 @@ const handler: Handler = async (event) => {
     return createErrorResponse('Method not allowed', 405);
   }
 
+console.log("Hallo Welt!")
+
   try {
     const { code, appId, clientSecret } = JSON.parse(event.body || '{}');
     const timestamp = new Date().toISOString();
